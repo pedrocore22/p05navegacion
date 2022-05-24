@@ -1,0 +1,32 @@
+<div class="container">
+    <h1>Nuevo Artículo</h1>
+    <form [formGroup]="form" (ngSubmit)="addArticulo()">
+        <div class="row column">
+            <label>Marca</label>
+            <select formControlName="marca">
+                <option *ngFor="let marca of marcas"
+                        value="{{marca}}">
+                    {{marca}}
+                </option>
+            </select>
+        </div>
+        <div class="row column">
+            <label>Modelo</label>
+            <input type="text" formControlName="modelo">
+        </div>
+        <div class="row column">
+            <label>Descripción</label>
+            <input type="text" formControlName="descripcion">
+        </div>
+        <div class="row column">
+            <label>Precio</label>
+            <input type="number" formControlName="precio">
+        </div>
+        <div class="buttons-row">
+            <button type="button" 
+                    class="outline"
+                    routerLink="/articulos">Cancelar</button>
+            <button type="submit">Añadir</button>
+        </div>
+    </form>
+</div>

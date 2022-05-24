@@ -22,5 +22,9 @@ export class ArticulosService {
     return this.articulos.find(elem => elem.id === id);
   }
 
+  addArticulo(articulo: any): void {
+    articulo.id = Math.random().toString().slice(-4);
+    this.articulos.push(articulo);
+  }
 
 }
