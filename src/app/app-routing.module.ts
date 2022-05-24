@@ -7,6 +7,10 @@ import { SoporteComponent } from './soporte/soporte.component';
 const routes: Routes = [
   {path:'', component: InicioComponent},
   {path:'soporte', component: SoporteComponent},
+  {
+    path: 'articulos', 
+    loadChildren: () => import('./articulos/articulos.module').then(m => m.ArticulosModule)
+  },
   {path: '**', component: P404Component}
 ];
 

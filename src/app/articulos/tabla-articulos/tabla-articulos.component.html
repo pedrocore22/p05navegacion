@@ -1,0 +1,17 @@
+<div class="container">
+    <h1>Listado de Artículos</h1>
+    <table>
+        <tr>
+            <th>Marca</th>
+            <th>Modelo</th>
+            <th></th>
+        </tr>
+        <tr *ngFor="let articulo of articulos">
+            <td>{{articulo.marca}}</td>
+            <td>{{articulo.modelo}}</td>
+            <td>
+                <a routerLink="/articulos/visualizar-articulo/{{articulo.id}}" >Visualizar</a>
+            </td>
+        </tr>
+    </table>
+</div>
